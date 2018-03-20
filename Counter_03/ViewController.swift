@@ -17,6 +17,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var lblC: UILabel!
     var count = 0
+    var color = 0
     @IBAction func btnC(_ sender: Any) {
         count = count + 1
         lblC.text = ("\(count)")
@@ -27,6 +28,15 @@ class ViewController: UIViewController {
         lblC.text = ("\(count)")
     }
     
+    @IBAction func btnBC(_ sender: Any) {
+        color = color + 1
+        if color % 2 == 0 {
+            view.backgroundColor = UIColor.yellow
+        }
+        else {
+            view.backgroundColor = UIColor.green
+        }
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
